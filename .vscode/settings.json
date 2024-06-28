@@ -1,0 +1,18 @@
+{
+  "editor.rulers": [
+    80,
+    120
+  ],
+  "files.eol": "\n",
+  "files.trimTrailingWhitespace": true,
+  "python.formatting.provider": "yapf",
+  "python.testing.pytestArgs": [
+    "tests"
+  ],
+  "python.testing.pytestEnabled": true,
+  "python.testing.unittestEnabled": false,
+  "iis.configDir": "",
+  "esbonio.sphinx.buildDir" : "${workspaceFolder}\\_build\\html",
+  "esbonio.sphinx.confDir": "${workspaceFolder}\\docs\\source",
+  "esbonio.sphinx.srcDir"   : "${workspaceFolder}\\docs\\source\\"
+}

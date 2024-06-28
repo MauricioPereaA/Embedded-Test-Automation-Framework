@@ -1,0 +1,21 @@
+Device:
+    name: "Device_0"
+    custom_attr: "custom_value"
+    description: "This is a sample device based on DeviceBase"
+    id: 23
+    interfaces:
+        SerialInterface:
+            name: SERIAL_0
+            port: COM5
+            baudrate: 9600
+            timeout: 1
+        TelnetInterface:
+            name: TELNET_0
+            host: 127.0.0.1
+            port: 23
+            timeout: 1
+        BluetoothInterface:
+            name: BLE_0
+            mac_address: 00:14:04:01:37:41
+            port: 1
+            timeout: 1

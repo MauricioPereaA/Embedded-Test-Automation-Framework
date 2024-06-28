@@ -1,0 +1,73 @@
+[project]
+name = "DTAF"
+description = "TAF Test Automation Framework"
+version = "2023.02.06"
+requires-python = ">=3.10"
+readme="README.md"
+
+dependencies = [
+    "cffi",
+    "bcrypt",
+    "cryptography",
+    "setuptools>=67.1.0",
+    "cython>=0.29.33",
+    "pytest>=7.2.1",
+    "pre-commit>=3.0.4",
+    "pyyaml>=0.2.5",
+    "toml",
+    "pyyaml",
+    "python-can",
+    "pyserial",
+    "pybluez@git+https://github.com/pybluez/pybluez.git",
+    "paramiko",
+]
+
+[style]
+based_on_style = "pep8"
+spaces_before_comment = 4
+split_before_logical_operator = true
+
+[project.optional-dependencies]
+dev = [
+    "sphinx>=6.1",
+    "sphinx_rtd_theme",
+    "yapf>=0.40.0",
+    "flake8",
+    "pre-commit",
+    "pytest-cov",
+    "coverage",
+]
+docs =[
+    "sphinxcontrib.jquery@git+https://github.com/sphinx-contrib/jquery",
+    "sphinx",
+    "sphinx_rtd_theme",
+    "esbonio",
+    "docutils",
+    "doc8",
+    "rstcheck",
+]
+
+[tool.flake8]
+max-line-lenght = 120
+exclude = [".git", "__pycache__", "dist"]
+max-complexity = 12
+
+[tool.yapf]
+COLUMN_LIMIT = 120
+
+[tool.pytest.ini_options]
+markers = [
+    "coverage: meassures the code coverage.",
+    "config_test: tests the configuration module only.",
+    "logger_test: Test logger.",
+    "flag_test: Test the active element without modifying the whole project (only for debug)",
+    "server_socket: Tests the socket interface.",
+    "server_socket_thread: Tests the Threaded Socket object.",
+    "Test_serial: SerialInterface class tests",
+    "Test_Telnet: TelnetInterface class tests",
+    "Test_Bluetooth: BluetoothInterface class tests"
+]
+
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
